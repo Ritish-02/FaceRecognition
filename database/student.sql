@@ -16,34 +16,40 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `register`
+-- Table structure for table `student`
 --
 
-DROP TABLE IF EXISTS `register`;
+DROP TABLE IF EXISTS `student`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `register` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `fname` varchar(50) DEFAULT NULL,
-  `lname` varchar(50) DEFAULT NULL,
-  `contact` varchar(15) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `securityQ` varchar(100) DEFAULT NULL,
-  `securityA` varchar(100) DEFAULT NULL,
-  `password` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `student` (
+  `Dep` varchar(45) DEFAULT NULL,
+  `Course` varchar(45) DEFAULT NULL,
+  `Year` varchar(45) DEFAULT NULL,
+  `Semester` varchar(45) DEFAULT NULL,
+  `Student_Id` varchar(45) NOT NULL,
+  `Name` varchar(45) DEFAULT NULL,
+  `Division` varchar(45) DEFAULT NULL,
+  `Roll` varchar(45) DEFAULT NULL,
+  `Gender` varchar(45) DEFAULT NULL,
+  `DOB` varchar(45) DEFAULT NULL,
+  `Phone` varchar(45) DEFAULT NULL,
+  `Address` varchar(45) DEFAULT NULL,
+  `Teacher` varchar(45) DEFAULT NULL,
+  `PhotoSample` varchar(45) DEFAULT NULL,
+  `Email` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Student_Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `register`
+-- Dumping data for table `student`
 --
 
-LOCK TABLES `register` WRITE;
-/*!40000 ALTER TABLE `register` DISABLE KEYS */;
-INSERT INTO `register` VALUES (1,'Ritish','Raj','962656123','ritish@gmail.com','Your Birth Place','Patna','123');
-/*!40000 ALTER TABLE `register` ENABLE KEYS */;
+LOCK TABLES `student` WRITE;
+/*!40000 ALTER TABLE `student` DISABLE KEYS */;
+INSERT INTO `student` VALUES ('ECE','M.Tech','2023-24','Semester 4','1','Jethalal','A','1','Male','58285258','vxdrdt','529','vj','vfg','');
+/*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -55,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-12 18:28:16
+-- Dump completed on 2025-02-12 18:27:28
